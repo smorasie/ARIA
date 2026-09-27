@@ -1,0 +1,106 @@
+{
+  "trade_id": "DUMMY-001",
+
+  "metadata": {
+    "date": "2026-09-27",
+    "session": "UK",
+    "account_type": "paper"
+  },
+
+  "instrument": {
+    "symbol": "EURUSD",
+    "name": "Euro / US dollar",
+    "type": "forex",
+    "base_currency": "EUR",
+    "quote_currency": "USD",
+    "account_currency": "GBP"
+  },
+
+  "market_context": {
+    "timeframe": "15m",
+    "market_condition": "trending",
+    "trend": "bullish",
+    "support": [
+      1.1720,
+      1.1700
+    ],
+    "resistance": [
+      1.1760,
+      1.1780
+    ]
+  },
+
+  "analysis": {
+    "observation": "Price is trading above the short-term moving averages and holding above support.",
+    "hypothesis": "Price may continue higher toward the next resistance area.",
+    "invalidation": "A sustained move below the planned invalidation level would invalidate the setup."
+  },
+
+  "plan": {
+    "strategy": "Long toward resistance",
+    "direction": "long",
+
+    "entry": {
+      "planned_price": 1.1740,
+      "order_type": "market"
+    },
+
+    "stop": {
+      "price": 1.1710
+    },
+
+    "target": {
+      "price": 1.1780
+    },
+
+    "risk": {
+      "account_size": 10000,
+      "account_currency": "GBP",
+      "risk_percent": 1,
+      "max_risk_account_currency": 100.00,
+
+      "stop_distance": 0.0030,
+      "stop_distance_pips": 30,
+
+      "planned_position_size": null,
+      "planned_risk_quote_currency": null,
+      "planned_risk_account_currency": null,
+      "position_size_for_max_risk": null
+    },
+
+    "reward": {
+      "target_distance": 0.0040,
+      "target_distance_pips": 40,
+
+      "reward_per_unit_quote_currency": null,
+      "potential_profit_quote_currency": null,
+      "potential_profit_account_currency": null,
+
+      "risk_reward_ratio": 1.33
+    }
+  },
+
+  "execution": {
+    "status": "planned",
+    "actual_entry": null,
+    "quantity": null,
+    "slippage": null,
+    "actual_stop_distance": null,
+    "actual_stop_distance_pips": null
+  },
+
+  "result": {
+    "exit_price": null,
+    "gross_pnl": null,
+    "fees": null,
+    "net_pnl": null,
+    "outcome": null
+  },
+
+  "review": {
+    "followed_plan": null,
+    "mistakes": [],
+    "lesson": null,
+    "emotional_state": null
+  }
+}

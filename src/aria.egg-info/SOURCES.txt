@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+src/aria/__inti__.py
+src/aria/main.py
+src/aria.egg-info/PKG-INFO
+src/aria.egg-info/SOURCES.txt
+src/aria.egg-info/dependency_links.txt
+src/aria.egg-info/top_level.txt
