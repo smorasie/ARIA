@@ -9,5 +9,10 @@ description = "AI Research & Investment Assistant"
 requires-python = ">=3.12"
 dependencies = []
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=8"
+]
+
 [tool.setuptools.packages.find]
 where = ["src"]
