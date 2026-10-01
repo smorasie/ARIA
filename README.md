@@ -1,29 +1,51 @@
 # ARIA
 
-**ARIA — AI Research & Investment Assistant**
+AI Research & Investment Assistant.
 
-ARIA is a personal LLM-powered assistant for researching investments, organising market information, and supporting thoughtful trading and portfolio decisions.
+ARIA is a local AI-assisted trading project designed to help with
+trade planning, position sizing, risk management, journaling and
+trade analysis.
 
-## Purpose
+The project is being developed incrementally, starting with a small
+core and expanding its capabilities over time.
 
-The project will bring together research workflows, portfolio context, market analysis, and conversational AI in one practical assistant. Its role is to help turn information into clear, reviewable insights—not to replace independent judgement or provide regulated financial advice.
+## Current Status
 
-## Initial direction
+Phase 0 — Foundation
 
-- Research companies, sectors, markets, and investment themes
-- Summarise relevant news, filings, and other source material
-- Track portfolio context, watchlists, and investment hypotheses
-- Help analyse trades and document decision-making
-- Surface risks, assumptions, and questions for further research
+Current sprint:
 
-## Status
+- Sprint 0.1 — Repository & Local Development Setup
 
-Early-stage personal project. This repository is being prepared for future public release on GitHub.
+The initial version of ARIA focuses on establishing the project
+foundation. Trading functionality will be developed in later phases.
 
-## Naming
+## Initial Core
 
-The name **ARIA** stands for **AI Research & Investment Assistant**. It is intentionally short, personal, and focused on assistance rather than automated or regulated investment advice.
+The initial ARIA core will focus on:
 
-## Disclaimer
+- Trade planning
+- Position-size calculations
+- Risk calculations
+- Trade journaling
+- User-provided analysis and comments
+- AI-assisted interpretation and analysis
 
-ARIA is for research and educational purposes. It does not provide financial, investment, legal, or tax advice, and it should not be used as the sole basis for investment decisions.
+Calculations such as position sizing and risk will be performed by
+deterministic Python code rather than by the AI model.
+
+## Repository Structure
+
+```text
+aria/
+├── data/
+│   ├── dummy/
+│   └── README.md
+├── docs/
+├── src/
+│   └── aria/
+├── tests/
+├── .env.example
+├── .gitignore
+├── pyproject.toml
+└── README.md
