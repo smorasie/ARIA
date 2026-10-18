@@ -23,10 +23,10 @@ def _default_data_directory() -> Path:
 
 
 DB_PATH = _default_data_directory() / "aria.db"
-PROJECT_ROOT = Path(__file__).resolve().parents[3]
-SCHEMA_SQL_PATH = PROJECT_ROOT / "sql" / "schema.sql"
-DEMO_SQL_PATH = PROJECT_ROOT / "sql" / "seed_demo.sql"
-MIGRATIONS_PATH = PROJECT_ROOT / "sql" / "migrations"
+PACKAGE_SQL_PATH = Path(__file__).resolve().parents[1] / "sql"
+SCHEMA_SQL_PATH = PACKAGE_SQL_PATH / "schema.sql"
+DEMO_SQL_PATH = PACKAGE_SQL_PATH / "seed_demo.sql"
+MIGRATIONS_PATH = PACKAGE_SQL_PATH / "migrations"
 BASE_SCHEMA_VERSION = 1
 
 

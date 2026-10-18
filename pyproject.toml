@@ -16,3 +16,6 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+aria = ["sql/*.sql", "sql/migrations/*.sql"]

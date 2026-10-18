@@ -9,9 +9,9 @@ from aria.local import database
 def isolated_database(tmp_path, monkeypatch):
     db_path = tmp_path / "nested" / "aria.sqlite3"
     monkeypatch.setattr(database, "DB_PATH", db_path)
-    monkeypatch.setattr(database, "SCHEMA_SQL_PATH", database.PROJECT_ROOT / "sql" / "schema.sql")
-    monkeypatch.setattr(database, "DEMO_SQL_PATH", database.PROJECT_ROOT / "sql" / "seed_demo.sql")
-    monkeypatch.setattr(database, "MIGRATIONS_PATH", database.PROJECT_ROOT / "sql" / "migrations")
+    monkeypatch.setattr(database, "SCHEMA_SQL_PATH", database.PACKAGE_SQL_PATH / "schema.sql")
+    monkeypatch.setattr(database, "DEMO_SQL_PATH", database.PACKAGE_SQL_PATH / "seed_demo.sql")
+    monkeypatch.setattr(database, "MIGRATIONS_PATH", database.PACKAGE_SQL_PATH / "migrations")
     return db_path
 
 
@@ -88,7 +88,7 @@ def test_unversioned_existing_data_is_preserved_and_rejected(isolated_database):
 def test_version_one_database_is_migrated(isolated_database):
     isolated_database.parent.mkdir(parents=True)
     with sqlite3.connect(isolated_database) as conn:
-        conn.executescript((database.PROJECT_ROOT / "sql" / "schema.sql").read_text(encoding="utf-8"))
+        conn.executescript(database.SCHEMA_SQL_PATH.read_text(encoding="utf-8"))
 
     database.initialize_database("personal")
 
